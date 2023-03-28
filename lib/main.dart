@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_with_firebase_owp/auth/structure/controllers/auth_controller.dart';
 import 'package:flutter_with_firebase_owp/routes/app_pages.dart';
 import 'package:flutter_with_firebase_owp/routes/app_routes.dart';
 
@@ -14,6 +15,9 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       getPages: AppPages.routes,
       initialRoute: Routes.HOME,
+      // initialBinding: BindingsBuilder(() {
+      //   Get.put<AuthController>(AuthController());
+      // }),
     );
   }
 }
