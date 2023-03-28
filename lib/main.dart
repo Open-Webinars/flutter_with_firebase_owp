@@ -1,4 +1,7 @@
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_with_firebase_owp/routes/app_pages.dart';
+import 'package:flutter_with_firebase_owp/routes/app_routes.dart';
 
 void main() => runApp(const MyApp());
 
@@ -7,16 +10,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
-      ),
+      getPages: AppPages.routes,
+      initialRoute: Routes.HOME,
     );
   }
 }
