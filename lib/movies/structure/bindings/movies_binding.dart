@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:flutter_with_firebase_owp/structure/controllers/movies_controller.dart';
+import 'package:flutter_with_firebase_owp/movies/structure/controllers/movies_controller.dart';
 
 class MoviesBinding extends Bindings {
   @override

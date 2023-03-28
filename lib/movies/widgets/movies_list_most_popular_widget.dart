@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 
-import 'package:flutter_with_firebase_owp/structure/controllers/movies_controller.dart';
+import 'package:flutter_with_firebase_owp/movies/structure/controllers/movies_controller.dart';
 import 'package:flutter_with_firebase_owp/movies/widgets/movies_list_widget.dart';
 
 class MoviesListMostPopularWidget extends StatelessWidget {
