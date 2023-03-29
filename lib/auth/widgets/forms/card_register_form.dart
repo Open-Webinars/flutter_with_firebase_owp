@@ -88,16 +88,17 @@ class CardRegisterForm extends StatelessWidget {
               TextButton(
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                    showDialog(
-                        context: context,
-                        builder: (contex) {
-                          return AlertDialog(
-                            title: Text("Este formulario es correcto"),
-                          );
-                        });
+                    // showDialog(
+                    //     context: context,
+                    //     builder: (contex) {
+                    //       return AlertDialog(
+                    //         title: Text("Este formulario es correcto"),
+                    //       );
+                    //     });
                     if (authController.passwordController.text ==
                         authController.repeatPasswordController.text) {
                       print("Ambas contraseñas son iguales");
+                      authController.registerWithEmailAndPassword();
                     } else {
                       print("Las contraseñas no son iguales");
                     }

@@ -1,17 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_with_firebase_owp/auth/structure/controllers/auth_controller.dart';
 
 import 'package:flutter_with_firebase_owp/movies/widgets/section_film_widget.dart';
+import 'package:get/get.dart';
 
 class MoviesHome extends StatelessWidget {
   const MoviesHome({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    AuthController authController = Get.find();
     return Scaffold(
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          FloatingActionButton(heroTag: "1", onPressed: () {}),
+          FloatingActionButton(
+              heroTag: "1",
+              onPressed: () {
+                authController.signOut();
+              }),
           SizedBox(
             width: 20,
           ),

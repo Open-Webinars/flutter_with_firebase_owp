@@ -53,4 +53,8 @@ class AuthController extends GetxController {
       password: passwordController.value.text,
     );
   }
+
+  Future<void> signOut() async {
+    return _auth.signOut();
+  }
 }
