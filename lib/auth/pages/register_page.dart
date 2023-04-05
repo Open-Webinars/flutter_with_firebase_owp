@@ -34,25 +34,21 @@ class RegisterPage extends StatelessWidget {
               child: CardRegisterForm(),
             ),
             const SizedBox(
-              height: 30,
+              height: 10,
             ),
-            GestureDetector(
-              child: Container(
-                color: Colors.blue,
-                height: 30,
-                child: const Text(
-                  "Login",
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
+            TextButton(
+              child: const Text(
+                "Login",
+                style: TextStyle(
+                  color: Colors.white,
                 ),
               ),
-              onTap: () {
+              onPressed: () {
                 Get.offAllNamed(Routes.LOGIN);
               },
             ),
             const SizedBox(
-              height: 30,
+              height: 10,
             ),
           ],
         ),

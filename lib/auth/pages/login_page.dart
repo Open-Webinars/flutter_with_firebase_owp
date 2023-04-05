@@ -43,18 +43,14 @@ class LoginPage extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            GestureDetector(
-              child: Container(
-                color: Colors.blue,
-                height: 30,
-                child: const Text(
-                  "Registrarse",
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
+            TextButton(
+              child: const Text(
+                "Registrarse",
+                style: TextStyle(
+                  color: Colors.white,
                 ),
               ),
-              onTap: () {
+              onPressed: () {
                 Get.offAllNamed(Routes.REGISTER);
               },
             ),

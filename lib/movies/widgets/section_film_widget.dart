@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_with_firebase_owp/movies/widgets/movies_list_most_popular_widget.dart';
+import 'package:flutter_with_firebase_owp/movies/widgets/movies_list_firebase_widget.dart';
 import 'package:flutter_with_firebase_owp/movies/widgets/movies_list_popular_widget.dart';
 import 'package:flutter_with_firebase_owp/themes/colors_theme.dart';
 
@@ -30,8 +30,8 @@ class SectionFilmsWidget extends StatelessWidget {
                 titleSection: "RECOMENDADO PARA TI",
               ),
               //Esta es la lista de películas ordenadas en función de la popularidad
-              MoviesListMostPopularWidget(
-                titleSection: "MEJOR VALORADAS",
+              MoviesListFirebaseWidget(
+                titleSection: "PELÍCULAS DESDE FIREBASE",
               ),
               SizedBox(
                 height: 100,

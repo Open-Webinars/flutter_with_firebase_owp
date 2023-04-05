@@ -65,17 +65,10 @@ class CardLoginForm extends StatelessWidget {
                     print("vuelve a intentarlo");
                   }
                 },
-                child: Container(
-                  height: 30,
-                  width: 100,
-                  color: Colors.pink,
-                  child: const Center(
-                    child: Text(
-                      "LOGIN",
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
-                    ),
+                child: const Text(
+                  "LOGIN",
+                  style: TextStyle(
+                    color: Colors.pink,
                   ),
                 ),
               ),

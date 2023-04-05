@@ -1,3 +1,4 @@
+import 'package:flutter_with_firebase_owp/movies/services/movies_firebase_repository.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_with_firebase_owp/movies/models/movie_model.dart';
@@ -16,6 +17,18 @@ class DetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.darkBackground,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          print(movie!.toJson());
+          final Map<String, dynamic> data = movie!.toJson();
+          print(data);
+          MoviesFirebaseRepository().setMoviesFirebase(data: data);
+        },
+        child: const Icon(
+          Icons.add,
+          size: 40,
+        ),
+      ),
       body: SingleChildScrollView(
         child: Column(
             mainAxisAlignment: MainAxisAlignment.start,

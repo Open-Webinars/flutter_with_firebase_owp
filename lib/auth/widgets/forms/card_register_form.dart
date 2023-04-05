@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_with_firebase_owp/auth/structure/controllers/auth_controller.dart';
 import 'package:flutter_with_firebase_owp/auth/utils/validators_utils.dart';
-import 'package:flutter_with_firebase_owp/themes/colors_theme.dart';
+
 import 'package:get/get.dart';
 
 class CardRegisterForm extends StatelessWidget {
@@ -27,7 +27,7 @@ class CardRegisterForm extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const SizedBox(
-                height: 10,
+                height: 20,
               ),
               //POSIBLE ERROR
               //Es necesario utilizar los widget de Flutter como hijos del Form
@@ -43,7 +43,7 @@ class CardRegisterForm extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 10,
+                height: 20,
               ),
               Flexible(
                 child: TextFormField(
@@ -55,7 +55,7 @@ class CardRegisterForm extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 10,
+                height: 20,
               ),
               Flexible(
                 child: TextFormField(
@@ -67,56 +67,24 @@ class CardRegisterForm extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(
-                height: 10,
-              ),
-              Flexible(
-                child: TextFormField(
-                  obscureText: true,
-                  controller: authController.repeatPasswordController,
-                  validator: formValidator.isValidPass,
-                  decoration: const InputDecoration(
-                    hintText: "Repite tu contraseña",
-                  ),
+              const Expanded(
+                child: SizedBox(
+                  height: 20,
                 ),
-              ),
-
-              const SizedBox(
-                height: 10,
               ),
 
               TextButton(
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                    // showDialog(
-                    //     context: context,
-                    //     builder: (contex) {
-                    //       return AlertDialog(
-                    //         title: Text("Este formulario es correcto"),
-                    //       );
-                    //     });
-                    if (authController.passwordController.text ==
-                        authController.repeatPasswordController.text) {
-                      print("Ambas contraseñas son iguales");
-                      authController.registerWithEmailAndPassword();
-                    } else {
-                      print("Las contraseñas no son iguales");
-                    }
+                    authController.registerWithEmailAndPassword();
                   } else {
                     print("vuelve a intentarlo");
                   }
                 },
-                child: Container(
-                  height: 30,
-                  width: 120,
-                  color: Colors.pink,
-                  child: const Center(
-                    child: Text(
-                      "REGISTRARSE",
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
-                    ),
+                child: const Text(
+                  "REGISTRARSE",
+                  style: TextStyle(
+                    color: Colors.pink,
                   ),
                 ),
               ),
